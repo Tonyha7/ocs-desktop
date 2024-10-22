@@ -1,9 +1,13 @@
 name: Build/release
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - "*"
+
+permissions:
+  contents: write
 
 jobs:
   release:
